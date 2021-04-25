@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        background-color: hsl(233, 47%, 7%);
+        display: grid;
+        min-height: 100vh;
+        font-family: 'Lexend Deca', sans-serif;
+      }
+
+      .main {
+        justify-self: center;
+        align-self: center;
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 75%;
+        height: 600px;
+        overflow: hidden;
+        border-radius: .5rem;
+        background-color: hsl(244, 38%, 16%);
+        color: hsl(0, 0%, 100%);
+
+      }
+
+      .main-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+      }
+
+      .main-text-1 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 3rem;
+        padding: 4rem 4rem 0 4rem;
+      }
+
+      .main-text-1>span {
+        color: hsl(277, 64%, 61%);
+      }
+
+      .main-text-2 {
+        opacity: .7;
+        font-size: 1.2rem;
+        padding: 0 4rem 0 4rem;
+      }
+
+      .main-text-3 {
+        padding: 0 4rem 4rem 4rem;
+        display: flex;
+      }
+
+      .main-text-3>div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 4.5rem;
+      }
+
+      .main-text-3>div>span:first-child {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: .4rem;
+      }
+
+      .main-text-3>div>span:last-child {
+        text-transform: uppercase;
+        opacity: .7;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .main-image {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-image: url('./images/image-header-desktop.jpg');
+        background-position: center;
+        background-size: cover;
+      }
+
+      .main-image>div {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(hsla(277, 64%, 61%, 0.4), hsla(277, 64%, 61%, 0.4));
+      }
+
+
+      .attribution {
+        font-size: 1rem;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+      }
+
+      .attribution a {
+        color: hsl(277, 64%, 61%);
+      }
+
+      @media screen and (max-width:600px) {
+        .main {
+          grid-template-columns: none;
+          grid-template-rows: 300px 1fr;
+          width: 90vw;
+          height: auto;
+        }
+
+        .main-image {
+          grid-row: 1/2;
+        }
+
+        .main-image {
+          background-image: url('./images/image-header-mobile.jpg');
+        }
+
+        .main-text {
+          grid-row: 2/3;
+          width: inherit;
+          text-align: center;
+        }
+
+        .main-text-1 {
+          font-size: 2rem;
+          padding: 2rem 2rem 2rem 2rem;
+        }
+
+        .main-text-2 {
+          padding: 0 2rem 0 2rem;
+        }
+
+        .main-text-3 {
+          padding: 2rem 2rem 1rem 2rem;
+          flex-direction: column;
+        }
+
+        .main-text-3>div {
+          display: flex;
+          flex-direction: column;
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="main-text">
+
+        <section class="main-text-1">
+          Get <span>insights</span> that help your business grow.
+        </section>
+
+        <section class="main-text-2">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </section>
+
+        <section class="main-text-3">
+          <div>
+            <span>10k+ </span>
+            <span>companies</span>
+          </div>
+          <div>
+            <span>314</span>
+            <span>templates</span>
+          </div>
+          <div>
+            <span>12m+</span>
+            <span>queries</span>
+          </div>
+        </section>
+
+      </div>
+      <div class="main-image">
+        <div class=""></div>
+      </div>
+    </div>
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/thesohailjafri" target="_blank">thesohailjafri</a>.
+    </div>
+  </body>
+
+</html>
